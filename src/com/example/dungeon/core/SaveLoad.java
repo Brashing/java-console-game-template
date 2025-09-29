@@ -42,9 +42,10 @@ public class SaveLoad {
             }
             Player p = s.getPlayer();
             String[] pp = map.getOrDefault("player", "player;Hero;10;3").split(";");
-            p.setName(pp[1]);
-            p.setHp(Integer.parseInt(pp[2]));
-            p.setAttack(Integer.parseInt(pp[3]));
+
+            p.setName(pp[0]);
+            p.setHp(Integer.parseInt(pp[1]));
+            p.setAttack(Integer.parseInt(pp[2]));
             p.getInventory().clear();
             String inv = map.getOrDefault("inventory", "");
             if (!inv.isBlank()) for (String tok : inv.split(",")) {

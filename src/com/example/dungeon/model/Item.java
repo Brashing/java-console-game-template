@@ -12,4 +12,8 @@ public abstract class Item {
     }
 
     public abstract void apply(GameState ctx);
+
+    public String getClassName() {
+        return this.getClass().getSimpleName();
+    }
 }
