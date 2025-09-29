@@ -39,7 +39,7 @@ public class Game {
         Room forest = new Room("Лес", "Шелест листвы и птичий щебет.");
         Room cave = new Room("Пещера", "Темно и сыро.");
 
-        // Устанавливаем связи (нейминг — направления)
+        // Устанавливаем связи
         square.getNeighbors().put("north", forest);
         forest.getNeighbors().put("south", square);
         forest.getNeighbors().put("east", cave);
